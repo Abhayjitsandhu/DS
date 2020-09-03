@@ -35,18 +35,18 @@ class Result
 }
 class CQStack
 {
-  public int maxSize; // size of stack array
+  public int maxSize;
   public char[] stackArray;
-  public int top; // top of stack
+  public int top;
 
-  public CQStack(int s) // constructor
+  public CQStack(int s)
   {
     maxSize=s;
     stackArray=new char[maxSize];
     top=-1;
   }
 
-  public void push(char j) // put item on top of stack
+  public void push(char j)
   {
     if(isFull())
       return;
@@ -57,7 +57,7 @@ class CQStack
     }
   }
   
-  public char pop() // take item from top of stack
+  public char pop()
   {
    if(isEmpty())
      return '\0';
@@ -69,14 +69,14 @@ class CQStack
       return temp;
     }
   }
- public boolean isEmpty() // true if stack is empty
+ public boolean isEmpty()
   {
     if(top==-1)
       return true;
     return false;
   }
 
-  public boolean isFull() // true if stack is full
+  public boolean isFull()
   {
     if(top==maxSize-1)
       return true;
